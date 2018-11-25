@@ -18,8 +18,8 @@
           <li><a href="contacts.html" aria-label="Контакты">Контакты</a></li>
         </ul>
         <ul class="user-navigation">
-          <li class="login-link">
-            <a href="login.html" aria-label="Войти">Вход</a>
+          <li>
+            <a class="login-link" href="login.html" aria-label="Войти">Вход</a>
           </li>
         </ul>
       </nav>
@@ -68,16 +68,12 @@
             <img src="img/index/index-gallery-photo.jpg" width="286" height="164" alt="Интерьер">
           </a>
         </figure>
-        <button type="button" 
-                name="gallery-button-back" 
-                class="button gallery-button gallery-button-back"
-                aria-label="Предыдущее изображение">
+        <button class="button gallery-button gallery-button-back"
+                type="button">
           Назад
         </button>
-        <button type="button" 
-                name="gallery-button-next" 
-                class="button gallery-button gallery-button-next"
-                aria-label="Следующее изображение">
+        <button class="button gallery-button gallery-button-next"
+                type="button">
           Вперед
         </button>
       </section>
@@ -101,24 +97,36 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <form action="https://barbershop.ru/make_appointment.html" method="post">
-          <label for="appointment-date">Дата</label>
-          <input type="date" name="appointment-date" id="appointment-date" value="2017-10-08" required>
-          <label for="appointment-time">Время</label>
-          <input type="time" name="appointment-time" id="appointment-time" value="10:00" required>
-          <label for="appointment-name">Ваше имя</label>
-          <input type="text" name="appointment-name" id="appointment-name" placeholder="Борода" required>
-          <label for="appointment-phone">Телефон</label>
-          <input type="tel" 
-                 name="appointment-phone"
-                 id="appointment-phone"
-                 pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" 
-                 placeholder="+7 123 456-78-90"
-                 required>
-          <button type="submit" 
-                  name="appointment-submit" 
-                  class="button appointment-submit-button" 
-                  aria-label="Записаться на стрижку">
+        <form class="appointment-form"
+              action="https://echo.htmlacademy.ru" 
+              method="post">
+          <p>
+            <label for="appointment-date">Дата</label>
+            <input type="date" name="appointment-date" id="appointment-date" value="2017-10-08" required>
+          </p>
+
+          <p>
+            <label for="appointment-time">Время</label>
+            <input type="time" name="appointment-time" id="appointment-time" value="10:00" required>
+          </p>
+
+          <p>
+            <label for="appointment-name">Ваше имя</label>
+            <input type="text" name="appointment-name" id="appointment-name" placeholder="Борода" required>
+          </p>
+
+          <p>
+            <label for="appointment-phone">Телефон</label>
+            <input type="tel" 
+                   name="appointment-phone"
+                   id="appointment-phone"
+                   pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" 
+                   placeholder="+7 123 456-78-90"
+                   required>
+           </p>
+
+          <button class="button appointment-submit-button"
+                  type="submit">
             Отправить
           </button>
         </form>
@@ -148,26 +156,47 @@
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
       <p>Введите свой логин и пароль</p>
-      <form action="https://barbershop.ru/login" method="post">
-        <label for="modal-login">Логин</label>
-        <input type="text" name="modal-login" id="modal-login" placeholder="Логин">
-        <label for="modal-password">Пароль</label>
-        <input type="password" name="modal-password" id="modal-password" placeholder="Пароль">
-        <input type="checkbox" name="remeber-me" id="remember-me" checked>
-        <label for="remember-me">Запомнить меня</label>
-        <a href="/password_forgot" aria-label="Забыл пароль">Я забыл пароль!</a>
-        <button type="submit" class="btn modal-submit-button">Войти</button>
+      <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="user-login">Логин</label>
+          <input class="login-icon-user"
+                 type="text" 
+                 name="login" 
+                 id="user-login" 
+                 placeholder="Логин">
+        </p>
+        
+        <p>
+          <label class="visually-hidden" for="user-password">Пароль</label>
+          <input class="login-icon-password"
+                 type="password" 
+                 name="modal-password" 
+                 id="user-password" 
+                 placeholder="Пароль">
+        </p>
+        
+        <p>
+          <label class="login-checkbox">
+            <input type="checkbox" name="remeber" checked>
+            Запомните меня
+          </label>
+
+          <a href="/password_forgot" aria-label="Забыл пароль">Я забыл пароль!</a>
+        </p>
+        
+        <button class="button" type="submit">Войти</button>
       </form>
-      <button type="button" class="login-modal-close">Закрыть окно логина</button>
+      <button class="modal-close" type="button">Закрыть окно логина</button>
     </section>
     
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/index/map.jpg" 
-           alt="Наше расположение на карте"
-           width="766"
-           height="560">
-      <button type="button" class="map-modal-close">Закрыть карту</button>
+      <img src="img/index/map.jpg"
+           width="780"
+           height="560"
+           alt="Офис компании по адресу ул. Большая Конюшенная 19/8,
+                Санкт-Петербург">
+      <button class="modal-close" type="button">Закрыть карту</button>
     </section>
   </body>
 </html>
