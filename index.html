@@ -113,9 +113,18 @@
     
     <section class="modal modal-login">
       <h2>Личный кабинет</h2>
-      <p>Введите свой логин и пароль.</p>
-      <!-- Здесь будет форма -->
-      <span class="modal-close">x</span>
+      <p>Введите свой логин и пароль</p>
+      <form action="https://barbershop.ru/login" method="post">
+        <label for="modal-login">Логин</label>
+        <input type="text" name="modal-login" id="modal-login" placeholder="Логин">
+        <label for="modal-password">Пароль</label>
+        <input type="password" name="modal-password" id="modal-password" placeholder="Пароль">
+        <input type="checkbox" name="remeber-me" id="remember-me" checked>
+        <label for="remember-me">Запомнить меня</label>
+        <a href="/password_forgot" aria-label="Забыл пароль">Я забыл пароль!</a>
+        <button type="submit" class="btn modal-submit-button">Войти</button>
+      </form>
+      <button type="button" class="login-modal-close">Закрыть окно логина</button>
     </section>
     
     <section class="modal modal-map">
@@ -124,7 +133,7 @@
            alt="Наше расположение на карте"
            width="766"
            height="560">
-      <button type="button" class="modal-close">Закрыть карту</button>
+      <button type="button" class="map-modal-close">Закрыть карту</button>
     </section>
   </body>
 </html>
