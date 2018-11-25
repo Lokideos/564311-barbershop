@@ -101,7 +101,27 @@
       <section class="appointment">
         <h2>Записаться</h2>
         <p class="appointment-info">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
-        <!-- Здесь будет форма -->
+        <form action="https://barbershop.ru/make_appointment.html" method="post">
+          <label for="appointment-date">Дата</label>
+          <input type="date" name="appointment-date" id="appointment-date" value="2017-10-08" required>
+          <label for="appointment-time">Время</label>
+          <input type="time" name="appointment-time" id="appointment-time" value="10:00" required>
+          <label for="appointment-name">Ваше имя</label>
+          <input type="text" name="appointment-name" id="appointment-name" placeholder="Борода" required>
+          <label for="appointment-phone">Телефон</label>
+          <input type="tel" 
+                 name="appointment-phone"
+                 id="appointment-phone"
+                 pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" 
+                 placeholder="+7 123 456-78-90"
+                 required>
+          <button type="submit" 
+                  name="appointment-submit" 
+                  class="button appointment-submit-button" 
+                  aria-label="Записаться на стрижку">
+            Отправить
+          </button>
+        </form>
       </section>
     </main>
     <footer class="main-footer">
