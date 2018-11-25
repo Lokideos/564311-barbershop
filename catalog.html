@@ -46,6 +46,63 @@
       <section class="shop-page-filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <!-- Здесь будет форма -->
+        <form action="filter.html" method="post">
+          <fieldset>
+            <legend>Производители:</legend>
+            <label>
+              <input type="checkbox" name="goods-baxter-of-california" checked>
+              Baxter of California
+            </label>
+            <label>
+              <input type="checkbox" name="goods-mr-matty">
+              Mr Matty
+            </label>
+            <label>
+              <input type="checkbox" name="goods-suavecito" checked>
+              Suavecito
+            </label>
+            <label>
+              <input type="checkbox" name="goods-malin-goetz">
+              Malin+Goetz
+            </label>
+            <label>
+              <input type="checkbox" name="goods-murrays">
+              Murray's
+            </label>
+            <label>
+              <input type="checkbox" name="goods-american-crew" checked>
+              American Crew
+            </label>
+          </fieldset>
+          <fieldset>
+            <legend>Группы товаров:</legend>
+            <label>
+              <input type="radio" 
+                     name="goods-groups" 
+                     value="shaving-accessories">
+              Бритвенные принадлежности
+            </label>
+            <label>
+              <input type="radio" 
+                     name="goods-groups" 
+                     value="care-products"
+                     checked>
+              Средства для ухода
+            </label>
+            <label>
+              <input type="radio" 
+                     name="goods-groups" 
+                     value="accessories">
+              Аксессуары
+            </label>
+          </fieldset>
+          <button type="submit"
+                  name="filter-button"
+                  class="button filter-button"
+                  aria-label="Отфильтровать по заданным пораметрам">
+            Показать
+          </button>
+        </form>
       </section>
 
       <section class="catalog">
