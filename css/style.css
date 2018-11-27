@@ -15,13 +15,70 @@ body {
   background-repeat: no-repeat;
 }
 
-.inner-page {
+.inner-page,
+.catalog-item-page {
   color: #000000;
 
   background-color: #f9f6f3;
   background-image: url("../img/shared/pattern-light.jpg");
   background-position: 0 0;
   background-repeat: repeat;
+}
+
+.catalog-item-page h1 {
+  color: #000000;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+.catalog-item-page .product-photos ul {
+  list-style: none;
+}
+
+.catalog-item-page .product-photo-full img,
+.catalog-item-page .product-photo-preview img {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-item-page .product-photo-full img:hover,
+.catalog-item-page .product-photo-preview img:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-info .product-availability
+.product-info .product-text {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.product-info .product-article {
+  font-size: 14px
+  line-height: 24px;
+  color: #aeaeae;
+}
+
+.product-info .product-price {
+  font-size: 14px
+  line-height: 24px;
+  color: #000000;
+  background-color: #e5e5e5;
+}
+
+.product-info h3 {
+  font-size: 24px;
+  line-height: 30px;
+  color: #000000;
+}
+
+.product-info ul {
+  list-style: none;
+}
+
+.product-info li {
+  font-size: 14px;
+  line-height: 24px;
+  color: #000000;
 }
 
 a {
