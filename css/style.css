@@ -68,11 +68,21 @@ a {
   height: 153px;
 }
 
+.inner-page .main-header-logo {
+  width: 111px;
+  height: 24px;
+  order: 0;
+}
+
 .main-navigation-wrapper {
   width: 100%;
   margin-bottom: 60px;
   
   background-color: #000000;
+}
+
+.inner-page .main-navigation-wrapper {
+  margin-bottom: 0;
 }
 
 .main-navigation-wrapper .container {
@@ -202,7 +212,19 @@ a {
 }
 
 .breadcrumbs {
+  display: flex;
+  margin: 0;
+  padding: 0;
+
   list-style: none;
+}
+
+.breadcrumbs li:nth-child(2) {
+  margin-left: 40px;
+}
+
+.breadcrumbs li:last-child {
+  margin-left: 45px;
 }
 
 .breadcrumbs a {
@@ -216,6 +238,33 @@ a {
 
 .breadcrumbs-current {
   color: #aba9a7;
+}
+
+.catalog-columns {
+  display: flex;
+  flex-direction: flex-start;
+}
+
+.catalog-columns .catalog-list {
+  display: flex;
+  flex-wrap: wrap;  
+  flex-direction: flex-start;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-columns .catalog-list li {
+  border-size: border-box;
+  width: 220px;
+  height: 286px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.catalog-columns .pagination-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
 }
 
 .filter fieldset {
